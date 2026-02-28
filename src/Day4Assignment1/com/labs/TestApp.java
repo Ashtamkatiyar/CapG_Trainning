@@ -9,7 +9,7 @@ public class TestApp {
                 EmployeeService.calculateAverageSalary());
 
         System.out.println("\nMax Salary By Department:");
-      System.out.println(EmployeeService.getMaxSalaryByDepartment());
+       System.out.println(EmployeeService.getMaxSalaryByDepartment());
 
         System.out.println("\nTotal Salary By Department:");
         System.out.println(EmployeeService.getTotalSalaryByDepartment());

@@ -20,7 +20,9 @@ public class EmployeeService {
                 .filter(e -> e.getDepartment() != null)
                 .collect(Collectors.groupingBy(
                         e -> e.getDepartment().getDepartmentName(),
-                        Collectors.maxBy(Comparator.comparing(e->e.getSalary()));
+                        Collectors.maxBy(
+                                Comparator.comparing(e -> e.getSalary())
+                        )
                 ));
     }
 
@@ -31,7 +33,7 @@ public class EmployeeService {
                 .filter(e -> e.getDepartment() != null)
                 .collect(Collectors.groupingBy(
                         e -> e.getDepartment().getDepartmentName(),
-                        Collectors.summingDouble(e->e.getSalary());
+                        Collectors.summingDouble(e->e.getSalary())
                 ));
     }
 
