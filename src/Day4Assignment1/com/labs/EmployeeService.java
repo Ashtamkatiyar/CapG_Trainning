@@ -31,7 +31,7 @@ public class EmployeeService {
                 .filter(e -> e.getDepartment() != null)
                 .collect(Collectors.groupingBy(
                         e -> e.getDepartment().getDepartmentName(),
-                        Collectors.summingDouble(Employee::getSalary)
+                        Collectors.summingDouble(e->e.getSalary());
                 ));
     }
 
