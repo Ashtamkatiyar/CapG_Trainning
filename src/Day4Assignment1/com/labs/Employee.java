@@ -69,8 +69,4 @@ public class Employee {
     public String toString() {
         return firstName + " " + lastName + " - " + salary;
     }
-
-    public void pr(){
-        System.out.println("Ashtam");
-    }
 }
