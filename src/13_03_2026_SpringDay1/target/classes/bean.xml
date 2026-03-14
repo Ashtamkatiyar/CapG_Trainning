@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+<!--    &lt;!&ndash; Employee Bean &ndash;&gt;-->
+<!--    <bean id="employee" class="org.example.Employee">-->
+<!--        <property name="empid" value="105"/>-->
+<!--        <property name="name" value="Switi"/>-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Address Dependency 1 &ndash;&gt;-->
+<!--    <bean id="add" class="org.example.Address">-->
+<!--        <property name="city" value="Delhi"/>-->
+<!--        <property name="country" value="India"/>-->
+<!--        <property name="zip" value="110001"/>-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Address Dependency 2 &ndash;&gt;-->
+<!--    <bean id="add2" class="org.example.Address">-->
+<!--        <property name="city" value="Mumbai"/>-->
+<!--        <property name="country" value="India"/>-->
+<!--        <property name="zip" value="400001"/>-->
+<!--    </bean>-->
+
+    <context:annotation-config/>
+    <context:component-scan base-package="org.example"/>
+    <context:property-placeholder location="classpath:dataproperties"/>
+
+
+
+
+</beans>

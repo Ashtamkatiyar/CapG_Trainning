@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Root container for all Spring beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    &lt;!&ndash; ================= ENGINE BEANS ================= &ndash;&gt;-->
+
+    <!--    &lt;!&ndash; Bean for PetrolEngine class &ndash;&gt;-->
+    <!--    <bean id="petrolEngine" class="org.example.PetrolEngine"/>-->
+
+    <!--    &lt;!&ndash; Bean for DieselEngine class &ndash;&gt;-->
+    <!--    <bean id="dieselEngine" class="org.example.DieselEngine"/>-->
+
+
+    <!--    &lt;!&ndash; ================= TYRE BEANS ================= &ndash;&gt;-->
+
+    <!--    &lt;!&ndash; Bean for MRF Tyre &ndash;&gt;-->
+    <!--    <bean id="mrfTyre" class="org.example.MrfTyre"/>-->
+
+    <!--    &lt;!&ndash; Bean for JK Tyre &ndash;&gt;-->
+    <!--    <bean id="jkTyre" class="org.example.JKTyre"/>-->
+
+
+    <!--    &lt;!&ndash; ================= CAR BEAN ================= &ndash;&gt;-->
+
+    <!--    &lt;!&ndash; Car bean definition &ndash;&gt;-->
+    <!--    <bean id="car" class="org.example.Car">-->
+
+    <!--        &lt;!&ndash; Inject simple property &ndash;&gt;-->
+    <!--        <property name="name" value="BMW"/>-->
+
+    <!--        &lt;!&ndash; Constructor Injection for Engine &ndash;&gt;-->
+    <!--        <constructor-arg ref="petrolEngine"/>-->
+
+    <!--        &lt;!&ndash; Constructor Injection for Tyre &ndash;&gt;-->
+    <!--        <constructor-arg ref="mrfTyre"/>-->
+
+    <!--    </bean>-->
+
+    <context:component-scan base-package="org.example"/>
+    <context:property-placeholder location="classpath:data.properties"/>
+
+</beans>
