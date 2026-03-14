@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--                Setter Injection  -->
+
+<!--    &lt;!&ndash; Book Bean &ndash;&gt;-->
+<!--    <bean id="book" class="LMS.Book">-->
+<!--        <property name="bookId" value="101"/>-->
+<!--        <property name="title" value="Spring"/>-->
+<!--        <property name="author" value="Ashtam"/>-->
+
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Librarian Bean &ndash;&gt;-->
+<!--    <bean id="lib" class="LMS.Librarian">-->
+<!--        <property name="librarianId" value="1001"/>-->
+<!--        <property name="name" value="Katiyar"/>-->
+<!--        <property name="book" ref="book"/>-->
+
+<!--    </bean>-->
+
+<!--         Constructor Injection -->
+
+        <!-- Book Bean -->
+        <bean id="book" class="LMS.Book">
+            <constructor-arg name="bookId" value="101"/>
+            <constructor-arg name="title" value="Spring"/>
+            <constructor-arg name="author" value="Rod Johnson"/>
+
+        </bean>
+
+        <!-- Librarian Bean -->
+        <bean id="lib" class="LMS.Librarian">
+            <constructor-arg name="librarianId" value="1001"/>
+            <constructor-arg name="name" value="Amit"/>
+            <constructor-arg name="book" ref="book"/>
+
+        </bean>
+
+</beans>
